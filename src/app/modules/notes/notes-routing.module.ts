@@ -1,16 +1,17 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { NotesComponent } from "./pages/notes/notes.component";
 
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "/notes",
+    component: NotesComponent,
     pathMatch: "full",
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class NotesRoutingModule {}

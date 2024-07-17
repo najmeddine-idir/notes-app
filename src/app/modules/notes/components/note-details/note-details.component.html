@@ -1,0 +1,18 @@
+<form (submit)="addOrUpdateNoteAsync(note)">
+    <h1 mat-dialog-title>Note</h1>
+    <div mat-dialog-content class="note-details-dialog-content">            
+        <mat-form-field class="notes-title small-height-input">
+            <input name="title" matInput placeholder="Title *" [(ngModel)]="note.title" required>        
+        </mat-form-field>  
+        <mat-form-field class="notes-content">
+            <textarea rows="15" name="content" matInput placeholder="Content *" [(ngModel)]="note.content" required></textarea>
+        </mat-form-field>            
+    </div>
+    <div mat-dialog-actions align="end">
+        <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Cancel</button>
+        <button type="submit" class="validate-note" mat-flat-button >
+            <mat-icon>check</mat-icon>
+            Validate
+        </button>
+    </div>
+</form>

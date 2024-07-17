@@ -1,0 +1,25 @@
+<mat-card 
+  class="note" 
+  [@highlightElement]="highlightStatus"
+  [@shadowingOnMouseOver]="displayStatus"
+  (mouseover)="onMouseOver()"
+  (mouseleave)="onMouseLeave()">
+    <mat-card-header>
+      <mat-card-title-group>
+        <button 
+          type="submit" 
+          class="remove-note"
+          mat-icon-button
+          color="warn"
+          [@fadeInOnMouseOver]="displayStatus"
+          (click)="removeNote()">
+            <mat-icon>close</mat-icon>
+        </button>
+        <mat-card-title>{{ note?.title }}</mat-card-title>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content class="note-content" (click)="onClickNote()">
+        {{ note?.content }}
+    </mat-card-content>
+</mat-card>

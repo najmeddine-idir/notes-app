@@ -1,0 +1,40 @@
+@import "../../../../../variables.scss";
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.notes-filter {
+  height: 50px;
+  width: 350px;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.add-note {
+  width: 400px;
+  height: 40px;
+  align-self: center;
+  color: white !important;
+  background-color: $button-and-middle-header-color !important;
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, max-content));
+  justify-content: center;
+  padding: initial;
+  overflow: auto;
+  margin-bottom: 60px;
+}

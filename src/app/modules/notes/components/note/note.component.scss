@@ -1,0 +1,28 @@
+.note {
+  width: 300px;
+  height: 220px;
+  background-color: whitesmoke;
+  margin: 10px;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.remove-note {
+  width: auto;
+  height: 0;
+  padding: 0;
+  bottom: 3px;
+  font-size: 0rem;
+}
+
+.note-content {
+  cursor: pointer;
+  height: inherit;
+  word-break: break-all;
+  white-space: pre-line;
+  overflow: hidden;
+  background: linear-gradient(to top, transparent 4%, black 22%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

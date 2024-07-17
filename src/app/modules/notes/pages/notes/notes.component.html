@@ -1,0 +1,14 @@
+<div class="notes-container">
+    <mat-form-field class="notes-filter small-height-input">
+      <input matInput type="search" placeholder="Filter" (input)="onChangerNotesFilter($event)">
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <div class="notes" [@smoothSlideUpOfItems]="notesLength">
+        <note *ngFor="let note of notes | async; trackBy: trackById" [note]="note"></note>
+    </div>    
+    <button type="submit" class="add-note" mat-flat-button (click)="openDialog()">
+        <mat-icon>add</mat-icon>
+        Add
+    </button>
+</div>
+   
